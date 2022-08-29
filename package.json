@@ -1,0 +1,87 @@
+{
+  "name": "pkg-name",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@7.9.5",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/alexzhang1030/pkg-name#readme",
+  "bugs": {
+    "url": "https://github.com/alexzhang1030/pkg-name/issues"
+  },
+  "license": "MIT",
+  "author": "alexzhang1030",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexzhang1030/pkg-name.git"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepublishOnly": "pnpm build",
+    "release": "bumpp --commit --push --tag && npm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks",
+    "up": "taze"
+  },
+  "devDependencies": {
+    "@alexzzz/eslint-config": "1.4.0",
+    "@commitlint/cli": "17.1.2",
+    "@commitlint/config-conventional": "17.1.0",
+    "@types/node": "18.7.13",
+    "bumpp": "8.2.1",
+    "eslint": "8.23.0",
+    "lint-staged": "13.0.3",
+    "pnpm": "7.9.5",
+    "simple-git-hooks": "2.8.0",
+    "taze": "0.8.0",
+    "tsup": "6.2.3",
+    "tsx": "3.9.0",
+    "typescript": "4.8.2",
+    "unplugin-auto-import": "0.11.2",
+    "vitest": "0.17.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged",
+    "commit-msg": "pnpm exec @commitlint/cli -c @commitlint/config-conventional"
+  },
+  "lint-staged": {
+    "*.{js,ts,json,md}": [
+      "eslint --fix"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "@alexzzz"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
