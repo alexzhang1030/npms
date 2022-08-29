@@ -1,19 +1,19 @@
 {
-  "name": "pkg-name",
+  "name": "@alexzzz/npms",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@7.9.5",
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/alexzhang1030/pkg-name#readme",
+  "homepage": "https://github.com/alexzhang1030/@alexzzz/npms#readme",
   "bugs": {
-    "url": "https://github.com/alexzhang1030/pkg-name/issues"
+    "url": "https://github.com/alexzhang1030/@alexzzz/npms/issues"
   },
   "license": "MIT",
   "author": "alexzhang1030",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexzhang1030/pkg-name.git"
+    "url": "git+https://github.com/alexzhang1030/@alexzzz/npms.git"
   },
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
