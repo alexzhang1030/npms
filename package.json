@@ -44,16 +44,22 @@
     "lint:fix": "eslint . --fix",
     "prepublishOnly": "pnpm build",
     "release": "bumpp --commit --push --tag && npm publish",
-    "start": "esno src/index.ts",
+    "start": "temir src/main.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks",
     "up": "taze"
   },
+  "dependencies": {
+    "@temir/core": "^0.0.16",
+    "@temir/select-input": "^0.0.16",
+    "vue": "^3.2.37"
+  },
   "devDependencies": {
     "@alexzzz/eslint-config": "1.4.0",
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
+    "@temir/cli": "^0.0.16",
     "@types/node": "18.7.13",
     "bumpp": "8.2.1",
     "eslint": "8.23.0",
@@ -69,7 +75,7 @@
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged",
-    "commit-msg": "pnpm exec @commitlint/cli -c @commitlint/config-conventional"
+    "commit-msg": "pnpm exec commitlint --edit \"${1}\""
   },
   "lint-staged": {
     "*.{js,ts,json,md}": [
