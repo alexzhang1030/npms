@@ -44,12 +44,12 @@
     "up": "taze"
   },
   "dependencies": {
-    "@temir/cli": "^0.0.16",
-    "@temir/core": "^0.0.19",
-    "@temir/tab": "^0.0.19",
+    "@temir/cli": "^0.0.20",
+    "@temir/core": "^0.0.20",
+    "@temir/tab": "^0.0.20",
     "fast-glob": "^3.2.12",
     "ohmyfetch": "^0.4.19",
-    "vue": "3.2.37"
+    "vue": "^3.2.39"
   },
   "devDependencies": {
     "@alexzzz/eslint-config": "1.4.0",
