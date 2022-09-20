@@ -12,15 +12,15 @@
     "npm-scripts-manager",
     "cli"
   ],
-  "homepage": "https://github.com/alexzhang1030/@alexzzz/npms#readme",
+  "homepage": "https://github.com/alexzhang1030/npms#readme",
   "bugs": {
-    "url": "https://github.com/alexzhang1030/@alexzzz/npms/issues"
+    "url": "https://github.com/alexzhang1030/npms/issues"
   },
   "license": "MIT",
   "author": "alexzhang1030",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexzhang1030/@alexzzz/npms.git"
+    "url": "git+https://github.com/alexzhang1030/npms.git"
   },
   "main": "./dist/index.js",
   "files": [
