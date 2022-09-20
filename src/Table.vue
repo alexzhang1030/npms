@@ -9,7 +9,7 @@ const getColor = (index: number) => index % 2 === 0 ? '#cca' : '#aac'
 </script>
 
 <template>
-  <TBox flex-direction="column" :width="100" border-style="round">
+  <TBox flex-direction="column" :width="90" border-style="round">
     <TBox>
       <TBox width="40%">
         <TText bold>
