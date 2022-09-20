@@ -23,7 +23,7 @@ catch (error) {
     <TBox flex-direction="column">
       <TText>
         <TText color="#1796FF">
-          NPM Script List {{ shouldUpdate }}
+          NPM Script List v{{localVersion}}
         </TText>
         <TNewline />
         <TText color="gray">
