@@ -1,5 +1,5 @@
 import fg from 'fast-glob'
-import fetch from 'node-fetch'
+import { $fetch } from 'ohmyfetch'
 import { ref } from 'vue'
 import localPkgJson from '../../package.json'
 import { ignorePath, pkgName } from './constant'
@@ -27,7 +27,7 @@ export function checkVersion() {
   const remoteVersion = ref('')
   const name = localPkgJson.name
 
-  fetch(`https://registry.npmjs.org/-/package/${name}/dist-tags`).then(res => res.json()).then((res) => {
+  $fetch(`https://registry.npmjs.org/-/package/${name}/dist-tags`, { parseResponse: JSON.parse }).then((res) => {
     remoteVersion.value = (res as { latest: string }).latest
     if (remoteVersion.value !== localVersion) shouldUpdate.value = true
   })
