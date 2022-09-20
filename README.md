@@ -26,7 +26,7 @@ You can press `<arrow-left>` and `<arrow-right>` to switch packages.
 ## Known Issues
 
 - [ ] if packages too many, packages'tab will squeeze it together
-- [ ] if scripts too many, scripts'tab container could not scroll
+- [ ] if scripts too many, scripts container could not scroll
 
 These behaviors are caused by TEMir, and i maybe will make pr then.
 
