@@ -7,9 +7,11 @@ specifiers:
   '@temir/cli': ^0.0.16
   '@temir/core': ^0.0.16
   '@temir/select-input': ^0.0.16
+  '@temir/tab': ^0.0.19
   '@types/node': 18.7.13
   bumpp: 8.2.1
   eslint: 8.23.0
+  fast-glob: ^3.2.12
   lint-staged: 13.0.3
   pnpm: 7.9.5
   simple-git-hooks: 2.8.0
@@ -31,9 +33,11 @@ devDependencies:
   '@commitlint/cli': 17.1.2
   '@commitlint/config-conventional': 17.1.0
   '@temir/cli': 0.0.16_bw4xur2vyhvhfd4whxbr7emp4u
+  '@temir/tab': 0.0.19
   '@types/node': 18.7.13
   bumpp: 8.2.1
   eslint: 8.23.0
+  fast-glob: 3.2.12
   lint-staged: 13.0.3
   pnpm: 7.9.5
   simple-git-hooks: 2.8.0
@@ -881,6 +885,33 @@ packages:
       yoga-layout-prebuilt: 1.10.0
     dev: false
 
+  /@temir/core/0.0.19:
+    resolution: {integrity: sha512-vNrLmwnQ5/HNNY1HEjnn/lWrch5zfIt/jlkHW5QVp14NM3fwl+1u7NJgtC6oPp8L0leRSyitLcZOlJ/eEyPI3w==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@vue/runtime-core': 3.2.37
+      ansi-escapes: 4.3.2
+      ansi-styles: 5.2.0
+      auto-bind: 4.0.0
+      chalk: 4.1.2
+      cli-boxes: 2.2.1
+      cli-cursor: 3.1.0
+      cli-truncate: 2.1.0
+      indent-string: 4.0.0
+      is-ci: 3.0.1
+      is-fullwidth-code-point: 3.0.0
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      patch-console: 1.0.0
+      signal-exit: 3.0.7
+      slice-ansi: 4.0.0
+      string-width: 4.2.3
+      vue: 3.2.37
+      widest-line: 3.1.0
+      wrap-ansi: 7.0.0
+      yoga-layout-prebuilt: 1.10.0
+    dev: true
+
   /@temir/select-input/0.0.16:
     resolution: {integrity: sha512-34nCxTt8OXPC2Rz0jqLRwayklOkB5W1P8dHKC/zYmWiGMWQ3okSfz0NnPS84F3Fwb9MVnLdYSSXDkmBxZpzY6g==}
     engines: {node: '>=14'}
@@ -890,6 +921,15 @@ packages:
       arr-rotate: 1.0.0
       figures: 3.2.0
     dev: false
+
+  /@temir/tab/0.0.19:
+    resolution: {integrity: sha512-Z0NM5vQEWZZXp3WrFOLdgZx28lNFhk/2BHr+Ja4Y6PltRtiw7Xx2oB2EktcNNbpOEknUzyx7xBOAIQN9IAqExw==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@temir/core': 0.0.19
+      '@vue/runtime-core': 3.2.37
+      readline: 1.3.0
+    dev: true
 
   /@tootallnate/once/2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
@@ -962,7 +1002,6 @@ packages:
 
   /@types/yoga-layout/1.9.2:
     resolution: {integrity: sha512-S9q47ByT2pPvD65IvrWp7qppVMpk9WGMbVq9wbWZOHg6tnXSD4vyhao6nOSBwwfDdV2p3Kx9evA9vI+XWTfDvw==}
-    dev: false
 
   /@typescript-eslint/eslint-plugin/5.35.1_pfwtupu3r4wxmgbx6hj7gwmyuu:
     resolution: {integrity: sha512-RBZZXZlI4XCY4Wzgy64vB+0slT9+yAPQRjj/HSaRwUot33xbDjF1oN9BLwOLTewoOI0jothIltZRe9uJCHf8gg==}
@@ -1320,7 +1359,6 @@ packages:
   /ansi-styles/5.2.0:
     resolution: {integrity: sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA==}
     engines: {node: '>=10'}
-    dev: false
 
   /ansi-styles/6.1.0:
     resolution: {integrity: sha512-VbqNsoz55SYGczauuup0MFUyXNQviSpFTj1RQtFzmQLk18qbVSpTFFGMT293rmDaQuKCT6InmbuEyUne4mTuxQ==}
@@ -1420,7 +1458,6 @@ packages:
   /auto-bind/4.0.0:
     resolution: {integrity: sha512-Hdw8qdNiqdJ8LqT0iK0sVzkFbzg6fhnQqqfWhBDxcHZvU75+B+ayzTy8x+k5Ix0Y92XOhOUlx74ps+bA6BeYMQ==}
     engines: {node: '>=8'}
-    dev: false
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -1488,7 +1525,7 @@ packages:
     dependencies:
       '@jsdevtools/ez-spawn': 3.0.4
       cac: 6.7.12
-      fast-glob: 3.2.11
+      fast-glob: 3.2.12
       kleur: 4.1.5
       prompts: 2.4.2
       semver: 7.3.7
@@ -1657,7 +1694,6 @@ packages:
   /cli-boxes/2.2.1:
     resolution: {integrity: sha512-y4coMcylgSCdVinjiDBuR8PCC2bLjyGTwEmPb9NHR/QaNU6EUOXcTY/s6VjGMD6ENSEaeQYHCY0GNGS5jfMwPw==}
     engines: {node: '>=6'}
-    dev: false
 
   /cli-cursor/3.1.0:
     resolution: {integrity: sha512-I/zHAwsKf9FqGoXM4WWRACob9+SNukZTd94DWF57E4toouRulbCxcUh6RKUEOQlYTHJnzkPMySvPNaaSLNfLZw==}
@@ -2895,8 +2931,8 @@ packages:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
     dev: true
 
-  /fast-glob/3.2.11:
-    resolution: {integrity: sha512-xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew==}
+  /fast-glob/3.2.12:
+    resolution: {integrity: sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==}
     engines: {node: '>=8.6.0'}
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -3174,7 +3210,7 @@ packages:
     dependencies:
       array-union: 2.1.0
       dir-glob: 3.0.1
-      fast-glob: 3.2.11
+      fast-glob: 3.2.12
       ignore: 5.2.0
       merge2: 1.4.1
       slash: 3.0.0
@@ -3434,7 +3470,6 @@ packages:
     hasBin: true
     dependencies:
       ci-info: 3.3.2
-    dev: false
 
   /is-core-module/2.10.0:
     resolution: {integrity: sha512-Erxj2n/LDAZ7H8WNJXd9tw38GYM3dv8rk8Zcs+jJuxYTW7sozH+SS8NtrSjVL1/vpLvWi1hxy96IzjJ3EHTJJg==}
@@ -3780,7 +3815,6 @@ packages:
 
   /lodash-es/4.17.21:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
-    dev: false
 
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
@@ -4473,7 +4507,6 @@ packages:
   /patch-console/1.0.0:
     resolution: {integrity: sha512-nxl9nrnLQmh64iTzMfyylSlRozL7kAXIaxw1fVcLYdyhNkJCRUzirRZTikXGJsg+hc4fqpneTK6iU2H1Q8THSA==}
     engines: {node: '>=10'}
-    dev: false
 
   /path-exists/3.0.0:
     resolution: {integrity: sha512-bpC7GYwiDYQ4wYLe+FA8lhRjhQCMcQGuSgGGqDkg/QerRWw9CmGRT0iSOVRSZJ29NMLZgIzqaljJ63oaL4NIJQ==}
@@ -4717,6 +4750,10 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: 2.3.1
+    dev: true
+
+  /readline/1.3.0:
+    resolution: {integrity: sha512-k2d6ACCkiNYz222Fs/iNze30rRJ1iIicW7JuX/7/cozvih6YCkFZH+J6mAFDVgv0dRBaAyr4jDqC95R2y4IADg==}
     dev: true
 
   /redent/3.0.0:
@@ -5443,7 +5480,7 @@ packages:
     dependencies:
       '@rollup/pluginutils': 4.2.1
       escape-string-regexp: 5.0.0
-      fast-glob: 3.2.11
+      fast-glob: 3.2.12
       local-pkg: 0.4.2
       magic-string: 0.26.2
       mlly: 0.5.14
@@ -5750,7 +5787,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       string-width: 4.2.3
-    dev: false
 
   /word-wrap/1.2.3:
     resolution: {integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==}
@@ -5844,4 +5880,3 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       '@types/yoga-layout': 1.9.2
-    dev: false

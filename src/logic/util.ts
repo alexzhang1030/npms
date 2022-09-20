@@ -1,8 +1,4 @@
 import { accessSync, constants, readFileSync } from 'node:fs'
-import { resolve as pathResolve } from 'node:path'
-
-const cwd = process.cwd()
-export const withCwd = (path: string) => pathResolve(cwd, path)
 
 export const isExisting = (filePath: string) => {
   try {
@@ -29,7 +25,7 @@ export const readFile = (filePath: string, type: 'regular' | 'json' = 'regular')
     return type === 'json' ? parseJson(file, `cannot parse ${filePath}`) : file
   }
   catch (error) {
-    throw new Error(`an error happened when reading file: ${filePath}`, {
+    throw new Error((error as Error).message, {
       cause: error,
     })
   }
