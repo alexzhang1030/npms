@@ -6,7 +6,6 @@ specifiers:
   '@commitlint/config-conventional': 17.1.0
   '@temir/cli': ^0.0.16
   '@temir/core': ^0.0.19
-  '@temir/select-input': ^0.0.19
   '@temir/tab': ^0.0.19
   '@types/node': 18.7.13
   bumpp: 8.2.1
@@ -26,7 +25,6 @@ specifiers:
 dependencies:
   '@temir/cli': 0.0.16_bw4xur2vyhvhfd4whxbr7emp4u
   '@temir/core': 0.0.19
-  '@temir/select-input': 0.0.19
   '@temir/tab': 0.0.19
   fast-glob: 3.2.12
   ohmyfetch: 0.4.19
@@ -878,16 +876,6 @@ packages:
       yoga-layout-prebuilt: 1.10.0
     dev: false
 
-  /@temir/select-input/0.0.19:
-    resolution: {integrity: sha512-KpE52G4n5Lw/iqimCwfo0kuY3XIH4iOHWrCgOXG16nSMyUyJpb00F42rybFK/+MDcRyNgh8C8zYFjtbM0PkjGA==}
-    engines: {node: '>=14'}
-    dependencies:
-      '@temir/core': 0.0.19
-      '@vue/runtime-core': 3.2.37
-      arr-rotate: 1.0.0
-      figures: 3.2.0
-    dev: false
-
   /@temir/tab/0.0.19:
     resolution: {integrity: sha512-Z0NM5vQEWZZXp3WrFOLdgZx28lNFhk/2BHr+Ja4Y6PltRtiw7Xx2oB2EktcNNbpOEknUzyx7xBOAIQN9IAqExw==}
     engines: {node: '>=14'}
@@ -1454,11 +1442,6 @@ packages:
   /argparse/2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
     dev: true
-
-  /arr-rotate/1.0.0:
-    resolution: {integrity: sha512-yOzOZcR9Tn7enTF66bqKorGGH0F36vcPaSWg8fO0c0UYb3LX3VMXj5ZxEqQLNOecAhlRJ7wYZja5i4jTlnbIfQ==}
-    engines: {node: '>=4'}
-    dev: false
 
   /array-ify/1.0.0:
     resolution: {integrity: sha512-c5AMf34bKdvPhQ7tBGhqkgKNUzMr4WUs+WDtC2ZUGOUncbxKMTvqxYctiseW3+L4bA8ec+GcZ6/A/FW4m8ukng==}
@@ -2964,13 +2947,6 @@ packages:
   /figgy-pudding/3.5.2:
     resolution: {integrity: sha512-0btnI/H8f2pavGMN8w40mlSKOfTK2SVJmBfBeVIj3kNw0swwgzyRq0d5TJVOwodFmtvpPeWPN/MCcfuWF0Ezbw==}
     dev: true
-
-  /figures/3.2.0:
-    resolution: {integrity: sha512-yaduQFRKLXYOGgEn6AZau90j3ggSOyiqXU0F9JZfeXYhNa+Jk4X+s45A2zg5jns87GAFa34BBm2kXw4XpNcbdg==}
-    engines: {node: '>=8'}
-    dependencies:
-      escape-string-regexp: 1.0.5
-    dev: false
 
   /file-entry-cache/6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}

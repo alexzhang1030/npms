@@ -46,7 +46,6 @@
   "dependencies": {
     "@temir/cli": "^0.0.16",
     "@temir/core": "^0.0.19",
-    "@temir/select-input": "^0.0.19",
     "@temir/tab": "^0.0.19",
     "fast-glob": "^3.2.12",
     "ohmyfetch": "^0.4.19",
