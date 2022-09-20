@@ -4,9 +4,8 @@ import { parseScripts, readFile } from './util'
 
 const ignorePattern = ignorePath.map(path => `!${path}`)
 
-const pkgFilePaths = await fg([pkgName, `**/**/${pkgName}`, ...ignorePattern], { dot: true })
-
 export function readScripts(): [string[], ReturnType<typeof parseScripts>[]] {
+  const pkgFilePaths = fg.sync([pkgName, `**/**/${pkgName}`, ...ignorePattern], { dot: true })
   const names: string[] = []
   const scripts: ReturnType<typeof parseScripts>[] = []
   pkgFilePaths.forEach((pkgFilePath) => {
