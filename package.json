@@ -41,7 +41,8 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks",
-    "up": "taze"
+    "up": "taze",
+    "saldkjsalknvclasnkvlanlknvjnadlkhdklashdlkasnfgnlakdksfja": "slakncklas"
   },
   "dependencies": {
     "@temir/cli": "^0.0.16",
@@ -49,7 +50,7 @@
     "@temir/select-input": "^0.0.19",
     "@temir/tab": "^0.0.19",
     "fast-glob": "^3.2.12",
-    "vue": "^3.2.39"
+    "vue": "3.2.37"
   },
   "devDependencies": {
     "@alexzzz/eslint-config": "1.4.0",
