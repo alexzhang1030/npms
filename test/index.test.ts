@@ -1,5 +1,5 @@
-describe('developer-plus', () => {
-  it('happy path', () => {
+describe('npms', () => {
+  it('test', () => {
     expect(1).toBe(1)
   })
 })
