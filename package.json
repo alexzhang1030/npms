@@ -2,8 +2,16 @@
   "name": "@alexzzz/npms",
   "version": "0.0.0",
   "packageManager": "pnpm@7.9.5",
-  "description": "",
-  "keywords": [],
+  "description": "a CLI tool to manage npm scripts",
+  "keywords": [
+    "temir",
+    "npm scripts",
+    "npm",
+    "scripts",
+    "npm-scripts",
+    "npm-scripts-manager",
+    "cli"
+  ],
   "homepage": "https://github.com/alexzhang1030/@alexzzz/npms#readme",
   "bugs": {
     "url": "https://github.com/alexzhang1030/@alexzzz/npms/issues"
@@ -14,27 +22,13 @@
     "type": "git",
     "url": "git+https://github.com/alexzhang1030/@alexzzz/npms.git"
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
-      ]
-    }
-  },
+  "main": "./dist/index.js",
   "files": [
     "dist"
   ],
+  "bin": {
+    "npms": "./dist/index.js"
+  },
   "sideEffects": false,
   "scripts": {
     "build": "temir build src/main.ts",
