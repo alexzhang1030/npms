@@ -41,8 +41,7 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks",
-    "up": "taze",
-    "saldkjsalknvclasnkvlanlknvjnadlkhdklashdlkasnfgnlakdksfja": "slakncklas"
+    "up": "taze"
   },
   "dependencies": {
     "@temir/cli": "^0.0.16",
