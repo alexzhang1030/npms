@@ -27,7 +27,7 @@
     "dist"
   ],
   "bin": {
-    "npms": "./dist/index.js"
+    "npms": "./cli.js"
   },
   "sideEffects": false,
   "scripts": {
