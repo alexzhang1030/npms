@@ -17,7 +17,7 @@ npms
 
 then, you could see these things on your terminal：
 
-![usage](screenshots/usage-1.png)
+![usage](screenshots/usage-01.gif)
 
 We support recursively get `package.json` scripts.
 
