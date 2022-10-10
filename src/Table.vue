@@ -8,12 +8,11 @@ const props = defineProps<{
   data: { label: string; value: string }[]
 }>()
 
-const getColor = (index: number) => index % 2 === 0 ? '#cca' : '#aac'
 const selectedIndex = ref(0)
+const getColor = (index: number) => index === selectedIndex.value ? '#000' : index % 2 === 0 ? '#cca' : '#aac'
 const getBgColor = (index: number) => index === selectedIndex.value ? '#C0CFFaF' : ''
 
 const handleExecuteScript = (script: string) => {
-  // eslint-disable-next-line no-console
   executeScript(script)
 }
 

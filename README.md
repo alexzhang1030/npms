@@ -15,6 +15,8 @@ pnpm install @alexzzz/npms
 npms
 ```
 
+### List all scripts
+
 then, you could see these things on your terminal：
 
 ![usage](screenshots/usage-01.gif)
@@ -22,6 +24,13 @@ then, you could see these things on your terminal：
 We support recursively get `package.json` scripts.
 
 You can press `<arrow-left>` and `<arrow-right>` to switch packages.
+
+### Execute scripts
+
+- Press `<arrow-up>` and `<arrow-down>` to select a script.
+- Press `<enter>` to execute the script.
+
+
 
 ## Known Issues
 
@@ -32,7 +41,7 @@ These behaviors are caused by TEMir, and i maybe will make pr then.
 
 ## Next Step
 
-- [ ] fixed known issues
+- [ ] fix known issues
 - [ ] support config
 - [ ] show cli help command
 
