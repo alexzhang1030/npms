@@ -1,6 +1,6 @@
 # NPMS(cripts)
 
-a CLI shows your project npm scripts
+a CLI shows and executes your project npm scripts
 
 ## Installation
 
