@@ -9,6 +9,8 @@ specifiers:
   '@temir/tab': ^0.0.20
   '@types/node': 18.7.13
   bumpp: 8.2.1
+  cross-spawn: ^7.0.3
+  detect-package-manager: ^2.0.1
   eslint: 8.23.0
   fast-glob: ^3.2.12
   lint-staged: 13.0.3
@@ -26,6 +28,8 @@ dependencies:
   '@temir/cli': 0.0.20_l2oatbueq4zmnlmgggxhoql4nu
   '@temir/core': 0.0.20
   '@temir/tab': 0.0.20
+  cross-spawn: 7.0.3
+  detect-package-manager: 2.0.1
   fast-glob: 3.2.12
   ohmyfetch: 0.4.19
   vue: 3.2.39
@@ -1920,6 +1924,13 @@ packages:
     resolution: {integrity: sha512-Mc7QhQ8s+cLrnUfU/Ji94vG/r8M26m8f++vyres4ZoojaRDpZ1eSIh/EpzLNwlWuvzSZ3UbDFspjFvTDXe6e/g==}
     engines: {node: '>=12.20'}
     dev: true
+
+  /detect-package-manager/2.0.1:
+    resolution: {integrity: sha512-j/lJHyoLlWi6G1LDdLgvUtz60Zo5GEj+sVYtTVXnYLDPuzgC3llMxonXym9zIwhhUII8vjdw0LXxavpLqTbl1A==}
+    engines: {node: '>=12'}
+    dependencies:
+      execa: 5.1.1
+    dev: false
 
   /diff/4.0.2:
     resolution: {integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==}

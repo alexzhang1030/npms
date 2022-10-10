@@ -47,6 +47,8 @@
     "@temir/cli": "^0.0.20",
     "@temir/core": "^0.0.20",
     "@temir/tab": "^0.0.20",
+    "cross-spawn": "^7.0.3",
+    "detect-package-manager": "^2.0.1",
     "fast-glob": "^3.2.12",
     "ohmyfetch": "^0.4.19",
     "vue": "^3.2.39"

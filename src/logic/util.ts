@@ -1,4 +1,6 @@
 import { accessSync, constants, readFileSync } from 'node:fs'
+import { spawnSync } from 'node:child_process'
+import { detect } from 'detect-package-manager'
 
 export const isExisting = (filePath: string) => {
   try {
@@ -36,4 +38,10 @@ export const parseScripts = (scripts: Record<string, string>) => {
     label: scriptName,
     value: scripts[scriptName],
   }))
+}
+
+export const executeScript = (script: string) => {
+  detect().then((pm) => {
+    spawnSync(pm, script.split(' '), { stdio: 'inherit' })
+  })
 }
