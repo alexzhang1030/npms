@@ -23,11 +23,26 @@ catch (error) {
     <TBox flex-direction="column">
       <TText>
         <TText color="#1796FF">
-          NPM Script List v{{localVersion}}
+          NPM Script List v{{ localVersion }}
         </TText>
         <TNewline />
         <TText color="gray">
-          Press Ctrl-C to quit, Press ←/→ to switch package
+          Quit:
+          <TText color="cyan">
+            Ctrl + C
+          </TText>
+          Switch Package:
+          <TText color="cyan">
+            Left/Right
+          </TText>
+          Select Scripts:
+          <TText color="cyan">
+            Up/Down
+          </TText>
+          Execute
+          <TText color="cyan">
+            Enter
+          </TText>
         </TText>
         <TNewline />
       </TText>
