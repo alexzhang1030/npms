@@ -25,12 +25,16 @@ We support recursively get `package.json` scripts.
 
 You can press `<arrow-left>` and `<arrow-right>` to switch packages.
 
-### Execute scripts
+### Execute scripts (WIP)
 
 - Press `<arrow-up>` and `<arrow-down>` to select a script.
 - Press `<enter>` to execute the script.
 
+![usage](screenshots/usage-02.gif)
 
+Now you can only execute it, but actually, the behavior is a little weird.
+
+So this feature is still under in development.
 
 ## Known Issues
 
